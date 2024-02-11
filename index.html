@@ -10,44 +10,23 @@
   <body>
     <select name="countries" id="countries">
       <option value="">Select a city</option>
-      <option value="paris">Paris 🇫🇷</option>
-      <option value="tokyo">Tokyo 🇯🇵</option>
-      <option value="sydney">Sydney 🇦🇺</option>
-      <option value="chicago">Chicago 🇺🇸</option>
+      <option value="Europe/Paris">Paris 🇫🇷</option>
+      <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
+      <option value="Australia/Sydney">Sydney 🇦🇺</option>
+      <option value="America/Chicago">Chicago 🇺🇸</option>
     </select>
     <script>
       function showCurrentTime(event) {
-        let parisTime = moment
-          .tz("Europe/Paris")
-          .format("MMMM Do YYYY, h:mm A");
-        let tokyoTime = moment.tz("Asia/Tokyo").format("MMMM Do YYYY, h:mm A");
-        let sydneyTime = moment
-          .tz("Australia/Sydney")
-          .format("MMMM Do YYYY, h:mm A");
-        let chicagoTime = moment
-          .tz("America/Chicago")
-          .format("MMMM Do YYYY, h:mm A");
-        if (event.target.value === "paris") {
-          alert("Bonjour! It is currently " + parisTime + " in Europe/Paris.");
-        }
-        if (event.target.value === "tokyo") {
-          alert(
-            "Kon'nichiwa! It is currently " + tokyoTime + " in Asia/Tokyo."
-          );
-        }
-        if (event.target.value === "sydney") {
-          alert(
-            "Hello! It is currently " + sydneyTime + " in Australia/Sydney."
-          );
-        }
-        if (event.target.value === "chicago") {
-          alert(
-            "Hello! It is currently " + chicagoTime + " in America/Chicago."
-          );
+        if (event.target.value.length > 0) {
+          let currentTime = moment()
+            .tz(event.target.value)
+            .format("dddd, MMMM D, YYYY h:mm A");
+
+          alert(`It is ${currentTime} in ${event.target.value}`);
         }
       }
-      let countries = document.querySelector("#countries");
-      countries.addEventListener("change", showCurrentTime);
+      let countrySelect = document.querySelector("#countries");
+      countrySelect.addEventListener("change", showCurrentTime);
     </script>
   </body>
 </html>
