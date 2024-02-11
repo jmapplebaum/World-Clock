@@ -13,11 +13,37 @@
       <option value="paris">Paris 🇫🇷</option>
       <option value="tokyo">Tokyo 🇯🇵</option>
       <option value="sydney">Sydney 🇦🇺</option>
+      <option value="chicago">Chicago 🇺🇸</option>
     </select>
     <script>
       function showCurrentTime(event) {
+        let parisTime = moment
+          .tz("Europe/Paris")
+          .format("MMMM Do YYYY, h:mm A");
+        let tokyoTime = moment.tz("Asia/Tokyo").format("MMMM Do YYYY, h:mm A");
+        let sydneyTime = moment
+          .tz("Australia/Sydney")
+          .format("MMMM Do YYYY, h:mm A");
+        let chicagoTime = moment
+          .tz("America/Chicago")
+          .format("MMMM Do YYYY, h:mm A");
         if (event.target.value === "paris") {
-          alert("Bonjour!");
+          alert("Bonjour! It is currently " + parisTime + " in Europe/Paris.");
+        }
+        if (event.target.value === "tokyo") {
+          alert(
+            "Kon'nichiwa! It is currently " + tokyoTime + " in Asia/Tokyo."
+          );
+        }
+        if (event.target.value === "sydney") {
+          alert(
+            "Hello! It is currently " + sydneyTime + " in Australia/Sydney."
+          );
+        }
+        if (event.target.value === "chicago") {
+          alert(
+            "Hello! It is currently " + chicagoTime + " in America/Chicago."
+          );
         }
       }
       let countries = document.querySelector("#countries");
