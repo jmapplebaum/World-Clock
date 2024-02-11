@@ -14,6 +14,14 @@
       <option value="tokyo">Tokyo 🇯🇵</option>
       <option value="sydney">Sydney 🇦🇺</option>
     </select>
-    <script></script>
+    <script>
+      function showCurrentTime(event) {
+        if (event.target.value === "paris") {
+          alert("Bonjour!");
+        }
+      }
+      let countries = document.querySelector("#countries");
+      countries.addEventListener("change", showCurrentTime);
+    </script>
   </body>
 </html>
