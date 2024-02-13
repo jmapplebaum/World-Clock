@@ -9,28 +9,42 @@
     <title>World Clock</title>
   </head>
   <body>
-    <h1>World Clock</h1>
-    <select name="countries" id="countries">
-      <option value="">Select a city</option>
-      <option value="Europe/Paris">Paris 🇫🇷</option>
-      <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
-      <option value="Australia/Sydney">Sydney 🇦🇺</option>
-      <option value="America/Chicago">Chicago 🇺🇸</option>
-    </select>
-    <footer>
-      <br />
-      This project was coded by
-      <a href="https://github.com/jmapplebaum" target="_blank"
-        >Jennah Applebaum</a
-      >, is
-      <a href="https://github.com/jmapplebaum/World-Clock" target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a href="https://world-clock-jmapplebaum.netlify.app/" target="_blank"
-        >hosted on Netlify
-      </a>
-    </footer>
+    <div class="container">
+      <h1>World Clock</h1>
+      <select name="countries" id="countries">
+        <option value="">Select a city</option>
+        <option value="Europe/Paris">Paris 🇫🇷</option>
+        <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
+        <option value="Australia/Sydney">Sydney 🇦🇺</option>
+        <option value="America/Chicago">Chicago 🇺🇸</option>
+      </select>
+
+      <div class="cities">
+        <h2>London 🇬🇧</h2>
+        <div class="date">February 12, 2024</div>
+        <div class="time">20:15:45</div>
+      </div>
+      <div class="cities">
+        <h2>Berlin 🇩🇪</h2>
+        <div class="date">February 12, 2024</div>
+        <div class="time">20:15:45</div>
+      </div>
+
+      <footer>
+        <br />
+        This project was coded by
+        <a href="https://github.com/jmapplebaum" target="_blank"
+          >Jennah Applebaum</a
+        >, is
+        <a href="https://github.com/jmapplebaum/World-Clock" target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://world-clock-jmapplebaum.netlify.app/" target="_blank"
+          >hosted on Netlify
+        </a>
+      </footer>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
