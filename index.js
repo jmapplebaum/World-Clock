@@ -45,7 +45,11 @@ function addCity(event) {
           <div class="time">${cityTime.format(
             "h:mm:ss [<small>]A[</small>]"
           )}</div>
-        </div>`;
+        </div>
+        
+        <br />
+        <a href="https://world-clock-jmapplebaum.netlify.app/"> Reset Cities
+      </a>`;
 }
 
 let citiesSelect = document.querySelector("#cities-select");
