@@ -1,19 +1,29 @@
 function updateTime() {
-  let chicagoElement = document.querySelector("#Chicago");
-  let chicagoDate = chicagoElement.querySelector(".date");
-  let chicagoTime = chicagoElement.querySelector(".time");
-  let chicagoFormat = moment().tz("America/Chicago");
+  let honoluluElement = document.querySelector("#Honolulu");
+  let honoluluDate = honoluluElement.querySelector(".date");
+  let honoluluTime = honoluluElement.querySelector(".time");
+  let honoluluFormat = moment().tz("Pacific/Honolulu");
 
-  chicagoDate.innerHTML = chicagoFormat.format("MMMM Do YYYY");
-  chicagoTime.innerHTML = chicagoFormat.format("h:mm:ss [<small>]A[</small>]");
+  honoluluDate.innerHTML = honoluluFormat.format("MMMM Do YYYY");
+  honoluluTime.innerHTML = honoluluFormat.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 
-  let londonElement = document.querySelector("#London");
-  let londonDate = londonElement.querySelector(".date");
-  let londonTime = londonElement.querySelector(".time");
-  let londonFormat = moment().tz("Europe/London");
+  let devnerElement = document.querySelector("#Denver");
+  let denverDate = devnerElement.querySelector(".date");
+  let denverTime = devnerElement.querySelector(".time");
+  let denverFormat = moment().tz("America/Denver");
 
-  londonDate.innerHTML = londonFormat.format("MMMM Do YYYY");
-  londonTime.innerHTML = londonFormat.format("h:mm:ss [<small>]A[</small>]");
+  denverDate.innerHTML = denverFormat.format("MMMM Do YYYY");
+  denverTime.innerHTML = denverFormat.format("h:mm:ss [<small>]A[</small>]");
+
+  let newYorkElement = document.querySelector("#New-York");
+  let newYorkDate = newYorkElement.querySelector(".date");
+  let newYorkTime = newYorkElement.querySelector(".time");
+  let newYorkFormat = moment().tz("America/New_York");
+
+  newYorkDate.innerHTML = newYorkFormat.format("MMMM Do YYYY");
+  newYorkTime.innerHTML = newYorkFormat.format("h:mm:ss [<small>]A[</small>]");
 }
 
 updateTime();
