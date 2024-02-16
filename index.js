@@ -12,6 +12,14 @@ countrySelect.addEventListener("change", showCurrentTime);
 
 //
 function updateTime() {
+  let chicagoElement = document.querySelector("#Chicago");
+  let chicagoDate = chicagoElement.querySelector(".date");
+  let chicagoTime = chicagoElement.querySelector(".time");
+  let chicagoFormat = moment().tz("America/Chicago");
+
+  chicagoDate.innerHTML = chicagoFormat.format("MMMM Do YYYY");
+  chicagoTime.innerHTML = chicagoFormat.format("h:mm:ss [<small>]A[</small>]");
+
   let londonElement = document.querySelector("#London");
   let londonDate = londonElement.querySelector(".date");
   let londonTime = londonElement.querySelector(".time");
@@ -19,14 +27,6 @@ function updateTime() {
 
   londonDate.innerHTML = londonFormat.format("MMMM Do YYYY");
   londonTime.innerHTML = londonFormat.format("h:mm:ss [<small>]A[</small>]");
-
-  let telAvivElement = document.querySelector("#Tel-Aviv");
-  let telAvivDate = telAvivElement.querySelector(".date");
-  let telAvivTime = telAvivElement.querySelector(".time");
-  let telAvivFormat = moment().tz("Israel");
-
-  telAvivDate.innerHTML = telAvivFormat.format("MMMM Do YYYY");
-  telAvivTime.innerHTML = telAvivFormat.format("h:mm:ss [<small>]A[</small>]");
 }
 
 updateTime();
