@@ -48,7 +48,7 @@ function addCity(event) {
         </div>
         
         <br />
-        <a href="https://world-clock-jmapplebaum.netlify.app/"> Reset Cities
+        <a href="/"> Reset cities
       </a>`;
 }
 
